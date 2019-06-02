@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.js": "/serverless_react/static/js/main.f2b4a435.chunk.js",
+    "main.js.map": "/serverless_react/static/js/main.f2b4a435.chunk.js.map",
+    "runtime~main.js": "/serverless_react/static/js/runtime~main.8c6e176f.js",
+    "runtime~main.js.map": "/serverless_react/static/js/runtime~main.8c6e176f.js.map",
+    "static/js/2.7cddf10a.chunk.js": "/serverless_react/static/js/2.7cddf10a.chunk.js",
+    "static/js/2.7cddf10a.chunk.js.map": "/serverless_react/static/js/2.7cddf10a.chunk.js.map",
+    "index.html": "/serverless_react/index.html",
+    "precache-manifest.6929c4ee42064f7c867db301b1e60eaf.js": "/serverless_react/precache-manifest.6929c4ee42064f7c867db301b1e60eaf.js",
+    "service-worker.js": "/serverless_react/service-worker.js"
+  }
+}
