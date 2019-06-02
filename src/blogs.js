@@ -1,4 +1,5 @@
 import React from 'react';
+import Jumbotron from 'react-bootstrap/Jumbotron';
 
 export default class Blogs extends React.Component {
 
@@ -27,10 +28,10 @@ export default class Blogs extends React.Component {
 
   renderList() {
     return this.state.blogsList.map(({title, body}, index) => (
-      <div key={index} className="blog-item">
+      <Jumbotron key={index} className="blog-item">
         <h2>{title}</h2>
-        <p>{body}</p>  
-      </div>
+        <p>{body}</p>
+      </Jumbotron>
     ))
   }
 

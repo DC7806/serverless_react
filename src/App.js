@@ -7,8 +7,8 @@ export default class App extends React.Component {
     return (
       <React.Fragment>
         <Header/>
-        <div className="container">
-          <Blogs className="blogs"></Blogs>
+        <div className="container my-5">
+          <Blogs className="blogs"/>
         </div>
       </React.Fragment>
     );  
