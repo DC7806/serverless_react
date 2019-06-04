@@ -6,7 +6,6 @@ export default class Blogs extends React.Component {
   constructor(_props){
     super()
     this.state = { blogsList: [] }
-
     this.fetchData = this.fetchData.bind(this)
   }
 
@@ -27,10 +26,10 @@ export default class Blogs extends React.Component {
   }
 
   renderList() {
-    return this.state.blogsList.map(({title, body}, index) => (
+    return this.state.blogsList.map(({ title, content }, index) => (
       <Jumbotron key={index} className="blog-item">
-        <h2>{title}</h2>
-        <p>{body}</p>
+        <h2>{ title }</h2>
+        <p>{ content }</p>
       </Jumbotron>
     ))
   }
