@@ -1,6 +1,6 @@
 import React from 'react';
 import BlogList from './components/BlogList';
-import Header from './header';
+import Header from './components/Header';
 import BlogForm from './components/Blogform' 
 
 export default class App extends React.Component {
