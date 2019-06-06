@@ -1,14 +1,14 @@
 {
   "files": {
-    "main.js": "/serverless_react/static/js/main.d6bb4009.chunk.js",
-    "main.js.map": "/serverless_react/static/js/main.d6bb4009.chunk.js.map",
+    "main.js": "/serverless_react/static/js/main.80b57a17.chunk.js",
+    "main.js.map": "/serverless_react/static/js/main.80b57a17.chunk.js.map",
     "runtime~main.js": "/serverless_react/static/js/runtime~main.8c6e176f.js",
     "runtime~main.js.map": "/serverless_react/static/js/runtime~main.8c6e176f.js.map",
     "static/css/2.266e55a5.chunk.css": "/serverless_react/static/css/2.266e55a5.chunk.css",
-    "static/js/2.2591daed.chunk.js": "/serverless_react/static/js/2.2591daed.chunk.js",
-    "static/js/2.2591daed.chunk.js.map": "/serverless_react/static/js/2.2591daed.chunk.js.map",
+    "static/js/2.17888458.chunk.js": "/serverless_react/static/js/2.17888458.chunk.js",
+    "static/js/2.17888458.chunk.js.map": "/serverless_react/static/js/2.17888458.chunk.js.map",
     "index.html": "/serverless_react/index.html",
-    "precache-manifest.cf75f7f54efc31f315551f43edf64480.js": "/serverless_react/precache-manifest.cf75f7f54efc31f315551f43edf64480.js",
+    "precache-manifest.c14975419c1c39fbbdc22dce772befc9.js": "/serverless_react/precache-manifest.c14975419c1c39fbbdc22dce772befc9.js",
     "service-worker.js": "/serverless_react/service-worker.js",
     "static/css/2.266e55a5.chunk.css.map": "/serverless_react/static/css/2.266e55a5.chunk.css.map"
   }
