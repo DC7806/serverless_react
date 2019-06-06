@@ -42,6 +42,19 @@ export default class BlogList extends React.Component {
       content: item.content
     })
   }
+
+  deleteRecord(item) {
+    let url = `https://bdrbn5pb32.execute-api.ap-southeast-1.amazonaws.com/dev/blogs/${item.id}`
+    let record = { id: item.id }
+
+    fetch(url, {
+      method: 'DELETE',
+      body: JSON.stringify(record)
+    })
+    .then(res => res.json())
+    .then(response => console.log(`Success: ${JSON.stringify(response)}`))
+    .catch(error => console.error(`Error: ${error}`));
+  }
   
   renderList() {
     return this.state.blogsList.map((item, index) => (
@@ -51,6 +64,9 @@ export default class BlogList extends React.Component {
         <ButtonToolbar>
           <Button variant="primary" onClick={() => this.onClick(item)} >
             Edit
+          </Button>
+          <Button variant="danger" className="ml-2" onClick={() => this.deleteRecord(item)} >
+            Delete
           </Button>
         </ButtonToolbar>
       </Jumbotron>
