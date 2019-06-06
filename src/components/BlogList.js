@@ -2,9 +2,9 @@ import React from 'react';
 import Jumbotron from 'react-bootstrap/Jumbotron';
 import ButtonToolbar from 'react-bootstrap/ButtonToolbar';
 import Button from 'react-bootstrap/Button';
-import FormModal from './components/FormModal';
+import FormModal from './FormModal';
 
-export default class Blogs extends React.Component {
+export default class BlogList extends React.Component {
 
   constructor(_props){
     super()

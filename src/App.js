@@ -1,5 +1,5 @@
 import React from 'react';
-import Blogs from './blogs';
+import BlogList from './components/BlogList';
 import Header from './header';
 import BlogForm from './components/Blogform' 
 
@@ -9,7 +9,7 @@ export default class App extends React.Component {
       <React.Fragment>
         <Header/>
         <div className="container my-5">
-          <Blogs className="blogs"/>
+          <BlogList className="blog-list"/>
           <BlogForm />
         </div>
       </React.Fragment>
