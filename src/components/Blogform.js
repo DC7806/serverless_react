@@ -5,6 +5,10 @@ import Button from 'react-bootstrap/Button';
 export default class BlogForm extends React.Component {
   constructor(_props) {
     super();
+    this.state = {
+      titleInput: '',
+      contentInput: ''
+    }
     this.handleInputChange = this.handleInputChange.bind(this);
     this.handleSubmit = this.handleSubmit.bind(this);
     this.postData = this.postData.bind(this);
@@ -32,7 +36,8 @@ export default class BlogForm extends React.Component {
   }
   
   handleSubmit(event) {
-    this.postData();  
+    this.postData();
+    this.setState({titleInput: '', contentInput: ''})    
     event.preventDefault();
   }
 
@@ -41,12 +46,19 @@ export default class BlogForm extends React.Component {
       <Form onSubmit={ this.handleSubmit }>
         <Form.Group controlId="formTitle">
           <Form.Label>Title</Form.Label>
-          <Form.Control onChange={ this.handleInputChange } name="titleInput" size="lg" type="text" />
+          <Form.Control onChange={ this.handleInputChange }
+                        name="titleInput"
+                        value={this.state.titleInput}
+                        size="lg" type="text" />
         </Form.Group>
 
         <Form.Group controlId="formContent">
           <Form.Label>Content</Form.Label>
-          <Form.Control onChange={ this.handleInputChange } name="contentInput" as="textarea" rows="10" />
+          <Form.Control onChange={ this.handleInputChange }
+                        name="contentInput"
+                        value={this.state.contentInput}
+                        as="textarea"
+                        rows="10" />
         </Form.Group>
 
         <Button variant="primary" type="submit">
