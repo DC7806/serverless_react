@@ -1,7 +1,7 @@
 import React from 'react';
 import BlogList from './components/BlogList';
 import Header from './components/Header';
-import BlogForm from './components/Blogform' 
+import CreateForm from './components/CreateForm' 
 
 export default class App extends React.Component {
   render(){
@@ -10,7 +10,7 @@ export default class App extends React.Component {
         <Header/>
         <div className="container my-5">
           <BlogList className="blog-list"/>
-          <BlogForm />
+          <CreateForm />
         </div>
       </React.Fragment>
     );  
