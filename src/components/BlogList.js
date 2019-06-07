@@ -21,6 +21,18 @@ export default class BlogList extends React.Component {
   componentDidMount() {
     this.fetchData()
   }
+
+  componentWillReceiveProps() {
+    this.fetchData()
+  }
+  
+  componentWillUnmount() {
+    this.fetchData()
+  }
+  
+  componentDidUpdate() {
+    this.fetchData()
+  }
   
   fetchData() {
     const url = 'https://bdrbn5pb32.execute-api.ap-southeast-1.amazonaws.com/dev/blogs'
@@ -78,10 +90,11 @@ export default class BlogList extends React.Component {
 
     return (      
       <FormModal show={ this.state.modalShow }
-                     onHide={ modalClose }
-                     blogid={ this.state.blogid }
-                     title={ this.state.title }
-                     content={ this.state.content } />
+                 onSubmit={ modalClose }
+                 onHide={ modalClose }
+                 blogid={ this.state.blogid }
+                 title={ this.state.title }
+                 content={ this.state.content } />
     )
   }
 
