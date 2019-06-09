@@ -22,17 +22,17 @@ export default class BlogList extends React.Component {
     this.fetchData()
   }
 
-  componentWillReceiveProps() {
-    this.fetchData()
-  }
+  // componentWillReceiveProps() {
+  //   this.fetchData()
+  // }
   
-  componentWillUnmount() {
-    this.fetchData()
-  }
+  // componentWillUnmount() {
+  //   this.fetchData()
+  // }
   
-  componentDidUpdate() {
-    this.fetchData()
-  }
+  // componentDidUpdate() {
+  //   this.fetchData()
+  // }
   
   fetchData() {
     const url = 'https://bdrbn5pb32.execute-api.ap-southeast-1.amazonaws.com/dev/blogs'
