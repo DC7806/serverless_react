@@ -3,7 +3,7 @@ import Form from 'react-bootstrap/Form';
 import Button from 'react-bootstrap/Button';
 
 export default class CreateForm extends React.Component {
-  constructor(_props) {
+  constructor() {
     super();
     this.state = {
       titleInput: '',
@@ -36,9 +36,11 @@ export default class CreateForm extends React.Component {
   }
   
   handleSubmit(event) {
-    this.postData();
-    this.setState({titleInput: '', contentInput: ''})    
     event.preventDefault();
+
+    this.postData();
+    this.props.fetchData();
+    this.setState({titleInput: '', contentInput: ''})
   }
 
   render() {
@@ -61,7 +63,7 @@ export default class CreateForm extends React.Component {
                         rows="10" />
         </Form.Group>
 
-        <Button variant="primary" type="submit">
+        <Button variant="primary" type="submit" >
           Submit
         </Button>
       </Form>

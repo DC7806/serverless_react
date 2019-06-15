@@ -6,44 +6,19 @@ import FormModal from './FormModal';
 
 export default class BlogList extends React.Component {
 
-  constructor(_props){
+  constructor(){
     super()
     this.state = {
-      blogsList: [],
+      blogList: [],
       modalShow: false,
       blogid: '',
       title: '',
       content: ''
     }
-    this.fetchData = this.fetchData.bind(this)
   }
 
-  componentDidMount() {
-    this.fetchData()
-  }
-
-  // componentWillReceiveProps() {
-  //   this.fetchData()
-  // }
-  
-  // componentWillUnmount() {
-  //   this.fetchData()
-  // }
-  
-  // componentDidUpdate() {
-  //   this.fetchData()
-  // }
-  
-  fetchData() {
-    const url = 'https://bdrbn5pb32.execute-api.ap-southeast-1.amazonaws.com/dev/blogs'
-    
-    fetch(url)
-    .then(response => (response.json()))
-    .then(data => {
-      this.setState(
-        { blogsList: data }
-      ) 
-    })
+  static getDerivedStateFromProps(nextProps, prevState) {
+    return { blogsList: nextProps.blogList }
   }
 
   onClick(item) {
@@ -58,7 +33,7 @@ export default class BlogList extends React.Component {
   deleteRecord(item) {
     let url = `https://bdrbn5pb32.execute-api.ap-southeast-1.amazonaws.com/dev/blogs/${item.id}`
     let record = { id: item.id }
-
+    
     fetch(url, {
       method: 'DELETE',
       body: JSON.stringify(record)
